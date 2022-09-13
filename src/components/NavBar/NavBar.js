@@ -1,6 +1,6 @@
 function NavBar() {
 
-    /*  */
+    
     return (
 
         <header className="App-header">

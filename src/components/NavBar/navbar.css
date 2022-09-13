@@ -2,47 +2,50 @@
     background: #43cea2;
     background: -webkit-linear-gradient(to right, #185a9d, #43cea2);
     background: linear-gradient(to right, #185a9d, #43cea2);
-    color:white ;
-    
+    color: white;
+
 }
-.App-header ul{
+
+.App-header ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    justify-content:space-around;
-}
-.App-header ul a{
-    display:block;
-    color:#fff;
-    text-decoration:none;
-    font-size:15px;
-    padding:10px;
+    justify-content: space-around;
 }
 
-.App-header ul li{
+.App-header ul a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 10px;
+}
+
+.App-header ul li {
     position: relative;
-        float:left; 
+    float: left;
 }
 
 
 .App {
     text-align: center;
-  }
+}
 
-h2{
+h2 {
     text-align: center;
 }
 
 
 .App-header ul ul {
-    display:none;
-    position:absolute;
-    top:100%;
-    left:0;
-    background:transparent; ;
-    padding:0;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: transparent;
+    ;
+    padding: 0;
 }
 
-.App-header ul li:hover > ul {
-    display:block;
-   }
+.App-header ul li:hover ul {
+    display: block;
+}
