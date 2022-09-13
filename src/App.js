@@ -8,7 +8,7 @@ function App() {
   /*  */
 
   return (
-    <div className="NavBar">
+    <div className="App">
       <header className="App-header">
         <h1>Tienda Online</h1>
       </header>
