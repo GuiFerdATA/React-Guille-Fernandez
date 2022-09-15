@@ -2,7 +2,8 @@
 import "./App.css";
 import NavBar from '../src/components/NavBar/NavBar';
 import ItemListContainer from '../src/components/Products/ItemListContainer'
-import Card from "./components/Products/Card";
+import CartWidget from "./components/NavBar/CartWidget";
+
 
 
 
@@ -12,9 +13,9 @@ function App() {
     <div className="App">
       <header className="App-header">
         <NavBar />
+        <CartWidget />
       </header>
-      <ItemListContainer />
-      <Card />
+      <ItemListContainer greeting="¡Tienda online dataShop!" />
     </div>
   );
 }
