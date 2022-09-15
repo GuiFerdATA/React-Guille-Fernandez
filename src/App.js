@@ -1,20 +1,19 @@
-import Logo from './media/Logo.png'; 
+/* import Logo from './media/Logo.png'; */
 import "./App.css";
-import './components/NavBar/NavBar';
-import NavBar from './components/NavBar/NavBar';
+import NavBar from '../src/components/NavBar/NavBar';
+import ItemListContainer from '../src/components/Products/ItemListContainer'  
+
+
+
 
 function App() {
-
-  /*  */
-
   return (
     <div className="App">
       <header className="App-header">
-        <img src={Logo}  className="App-logo" alt="logo"/>
-        <h1>Tienda Online</h1>
+        <NavBar />
       </header>
-      <NavBar />
-
+     <ItemListContainer />
+     
     </div>
   );
 }
