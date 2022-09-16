@@ -3,10 +3,11 @@
     background: -webkit-linear-gradient(to right, #185a9d, #43cea2);
     background: linear-gradient(to right, #185a9d, #43cea2);
     color: white;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .App-header ul {
+    margin-bottom: 100px;
     list-style: none;
     display: flex;
     justify-content: center;
@@ -48,13 +49,4 @@ h2 {
 
 .App-header ul li:hover ul {
     display: block;
-}
-
-.menu-principal li a {
-    font-size: 25px;
-    margin-top: 5px;
-}
-
-.menu-principal{
-    margin-bottom: 110px;
 }
