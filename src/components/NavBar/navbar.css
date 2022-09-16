@@ -49,3 +49,12 @@ h2 {
 .App-header ul li:hover ul {
     display: block;
 }
+
+.menu-principal li a {
+    font-size: 25px;
+    margin-top: 5px;
+}
+
+.menu-principal{
+    margin-bottom: 110px;
+}
