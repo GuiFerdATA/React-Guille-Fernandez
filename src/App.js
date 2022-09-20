@@ -6,8 +6,6 @@ import CartWidget from "./components/NavBar/CartWidget";
 
 
 
-
-
 function App() {
   return (
     <div className="App">
