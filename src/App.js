@@ -1,8 +1,9 @@
 /* import Logo from './media/Logo.png'; */
 import "./App.css";
 import NavBar from '../src/components/NavBar/NavBar';
-import ItemListContainer from '../src/components/Products/ItemListContainer'
+/*import ItemListContainer from '../src/components/Products/ItemListContainer'*/
 import CartWidget from "./components/NavBar/CartWidget";
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 
 
 
@@ -13,7 +14,8 @@ function App() {
         <NavBar />
         <CartWidget />
       </header>
-      <ItemListContainer greeting="¡Tienda online dataShop!" />
+      {/* <ItemListContainer greeting="¡Tienda online dataShop!" />*/}
+      <ItemDetailContainer />
     </div>
   );
 }

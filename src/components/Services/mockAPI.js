@@ -18,7 +18,7 @@ const data = [
     {
         id: 3,
         title: "Jonis",
-        description: "Gilhouley",
+        description: "Remera térmica ultra resistente",
         price: 5000,
         img: "/assets/imagenes/remeratermica3.png",
         stock: 20,
@@ -128,6 +128,12 @@ export default function getItems() {
         }, 2000)
     })
 };
-
+export function getItem() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(data[2]);
+        }, 2000)
+    })
+};
 
 
