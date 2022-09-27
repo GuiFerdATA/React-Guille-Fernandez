@@ -32,4 +32,4 @@ function ItemCount(props) {
     )
 }
 
-export default ItemCount 
+export default ItemCount ;
