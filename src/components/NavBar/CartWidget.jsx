@@ -8,7 +8,7 @@ import { faCartArrowDown } from "@fortawesome/free-solid-svg-icons";
 
 function CartWidget() {
     return (
-        <div>
+        <div className="card-widget">
             <FontAwesomeIcon icon={faCartArrowDown} />
             <span>0</span>
         </div>
