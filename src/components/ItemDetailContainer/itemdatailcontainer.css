@@ -2,21 +2,22 @@
     width: 280px;
     height: 260px;
     object-fit: cover;
+    
 }
 .card-detail{
     margin-bottom: 100px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .ItemC{
     display: flex;
-    font-size: 16px; /* Cambiar el tamaño de la tipografia */
-	font-weight: bold; /* Fuente en negrita o bold */
-	color: #ffffff; /* Color del texto */
-	border-radius: 5px; /* Borde del boton */
-	letter-spacing: 2px; /* Espacio entre letras */
-	background-color:  rgb(97, 150, 220); /* Color de fondo */
+    font-size: 16px; 
+	font-weight: bold; 
+	color: #ffffff; 
+	border-radius: 5px; 
+	letter-spacing: 2px; 
+	background-color:  rgb(97, 150, 220); 
 	position: fixed;
 	bottom: 70px;
 	right: 202px;

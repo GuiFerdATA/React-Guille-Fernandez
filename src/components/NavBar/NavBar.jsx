@@ -9,6 +9,7 @@ function NavBar() {
                 <ul className="menu-principal">
                     <li><a href="-"> Inicio </a></li>
                     <li><a href="-">Nosotros</a></li>
+                    <li><a href="-">Tienda</a></li>
                     <li><a href="-">Categorias</a>
                         <ul>
                             <li><a href="-">Contacto</a></li>
@@ -16,11 +17,11 @@ function NavBar() {
                             <li><a href="-">Reclamos</a></li>
                         </ul>
                     </li>
-                    <li><a href="-">Tienda</a></li>
                     <li> <CartWidget /></li>
                 </ul>
             </nav>
         </header>
+        
 
     );
 }
