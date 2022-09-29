@@ -6,7 +6,7 @@ function NavBar() {
 
         <header className="App-header">
             <nav>
-                <h2>DataShoop</h2>
+                <h2>Ecommerce DataShoop</h2>
                 <ul className="menu-principal">
                     <li><Link to="/"> Inicio </Link></li>
                     <li><Link to="/category/Nosotros">Nosotros</Link></li>

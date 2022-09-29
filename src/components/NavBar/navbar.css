@@ -48,7 +48,7 @@ h2 {
     display: none;
     position: absolute;
     padding: 5px;
-    background:rgb(92, 90, 90);
+    background-color: #185a9d;
     margin-top: 2px;
 }
 .App-header ul ul a {
@@ -60,7 +60,10 @@ h2 {
     display: block;
 }
 
-
 .App-header nav {
-    height: 115px;
+    height: 150px;
+}
+.App-header h2{
+    margin-bottom: 50px;
+    color:rgb(53, 53, 53);
 }

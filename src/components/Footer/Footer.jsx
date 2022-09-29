@@ -6,7 +6,7 @@ function Footer() {
         <div className="content-footer">
             <footer className="footer">
                 <h2>
-                    <strong>Footer</strong>
+                    <strong>MyEcommerce</strong>
                 </h2>
                 <ul>
                     <li>Reclamos</li>
