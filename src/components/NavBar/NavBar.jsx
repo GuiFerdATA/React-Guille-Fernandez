@@ -1,4 +1,5 @@
 import CartWidget from "./CartWidget";
+import { Link } from "react-router-dom";
 function NavBar() {
 
     return (
@@ -7,14 +8,13 @@ function NavBar() {
             <nav>
                 <h2>DataShoop</h2>
                 <ul className="menu-principal">
-                    <li><a href="-"> Inicio </a></li>
-                    <li><a href="-">Nosotros</a></li>
-                    <li><a href="-">Tienda</a></li>
-                    <li><a href="-">Categorias</a>
+                    <li><Link to="/"> Inicio </Link></li>
+                    <li><Link to="-">Nosotros</Link></li>
+                    <li><Link to="-">Categorias</Link>
                         <ul>
-                            <li><a href="-">Contacto</a></li>
-                            <li><a href="-">Envios</a></li>
-                            <li><a href="-">Reclamos</a></li>
+                            <li><Link to="-">Contacto</Link></li>
+                            <li><Link to="-">Envios</Link></li>
+                            <li><Link to="-">Reclamos</Link></li>
                         </ul>
                     </li>
                     <li> <CartWidget /></li>

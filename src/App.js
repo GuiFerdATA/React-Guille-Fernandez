@@ -15,7 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<ItemListContainer greeting="¡Tienda online dataShop!" />} />
           <Route path="/item/:id" element={<ItemDetailContainer />} />
-          <Route path="*" element={<h1>404:ERROR</h1>} />
+          <Route path="*" element={<h1>200:Pagina en construcción</h1>} />
         </Routes>
       </div>
     </BrowserRouter>
