@@ -1,5 +1,7 @@
 
 import "./footer.css";
+import { Link } from "react-router-dom";
+
 
 function Footer() {
     return (
@@ -9,9 +11,9 @@ function Footer() {
                     <strong>MyEcommerce</strong>
                 </h2>
                 <ul>
-                    <li>Reclamos</li>
-                    <li>Contacto</li>
-                    <li>Envios</li>
+                    <li><Link to="/category/Contacto">Contacto</Link></li>
+                    <li><Link to="/category/Envios">Envios</Link></li>
+                    <li><Link to="/category/Reclamos">Reclamos</Link></li>
                 </ul>
             </footer>
         </div>
