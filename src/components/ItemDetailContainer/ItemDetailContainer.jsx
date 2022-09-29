@@ -2,13 +2,16 @@ import React, { useState, useEffect } from "react";
 import { getItem } from "../Services/mockAPI";
 import "./itemdatailcontainer.css"
 import ItemDetail from "./ItemDetail";
+import { useParams } from "react-router-dom";
 
 function ItemDetailContainer() {
   let [data, setData] = useState({});
 
+const {id} = useParams();
+
   useEffect(() => {
-    getItem(2).then((respuestaDatos) => setData(respuestaDatos));
-  }, []);
+    getItem(id).then((respuestaDatos) => setData(respuestaDatos));
+  },[id]);
 
   return (
     <div>
@@ -23,3 +26,4 @@ function ItemDetailContainer() {
 }
 
 export default ItemDetailContainer;
+ 

@@ -7,7 +7,7 @@ import ItemCount from '../ItemCount/ItemCount';
 function ItemDetail(props) {
 
     return (
-        <div>
+        <div className='cCs'>
             <div className="main-container">
             <h3>{props.title}</h3>
                 <img src={props.img} alt="card img" />

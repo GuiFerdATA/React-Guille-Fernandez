@@ -6,6 +6,7 @@ const data = [
         price: 5.600,
         img: "/assets/imagenes/remeratermica1.jpg",
         stock: 15,
+        category: "remeras",
     },
     {
         id: 2,
@@ -14,6 +15,7 @@ const data = [
         price: 1234,
         img: "/assets/imagenes/remeratermica2.jpg",
         stock: 6,
+        category: "remeras",
     },
     {
         id: 3,
@@ -22,6 +24,7 @@ const data = [
         price: 5000,
         img: "/assets/imagenes/remeratermica3.png",
         stock: 20,
+        category: "remeras",
     },
     {
         id: 4,
@@ -30,6 +33,7 @@ const data = [
         price: 4000,
         img: "/assets/imagenes/remeratermica4.jpg",
         stock: 6,
+        category: "remeras",
     },
     {
         id: 5,
@@ -38,6 +42,7 @@ const data = [
         price: 9000,
         img: "/assets/imagenes/remeratermica5.png",
         stock: 6,
+        category: "remeras",
     },
     {
         id: 6,
@@ -46,6 +51,7 @@ const data = [
         price: 6500,
         img: "/assets/imagenes/remeratermica6.jpg",
         stock: 6,
+        category: "remeras",
     },
     {
         id: 7,
@@ -54,6 +60,7 @@ const data = [
         price: 7000,
         img: "/assets/imagenes/remeratermica7.jpg",
         stock: 6,
+        category: "remeras",
     },
     {
         id: 8,
@@ -62,6 +69,7 @@ const data = [
         price: 2500,
         img: "/assets/imagenes/remeratermica8.jpg",
         stock: 6,
+        category: "pantalones",
     },
     {
         id: 9,
@@ -70,6 +78,7 @@ const data = [
         price: 11000,
         img: "/assets/imagenes/remeratermica9.jpg",
         stock: 6,
+        category: "pantalones",
     },
     {
         id: 10,
@@ -78,6 +87,7 @@ const data = [
         price: 5680,
         img: "/assets/imagenes/remeratermica10.jpg",
         stock: 6,
+        category: "pantalones",
     },
     {
         id: 11,
@@ -86,6 +96,7 @@ const data = [
         price: 8050,
         img: "/assets/imagenes/remeratermica11.jpg",
         stock: 6,
+        category: "pantalones",
     },
     {
         id: 12,
@@ -94,6 +105,7 @@ const data = [
         price: 8760,
         img: "/assets/imagenes/remeratermica12.jpg",
         stock: 6,
+        category: "pantalones",
     },
     {
         id: 13,
@@ -102,6 +114,7 @@ const data = [
         price: 3570,
         img: "/assets/imagenes/remeratermica13.jpg",
         stock: 6,
+        category: "pantalones",
     },
     {
         id: 14,
@@ -110,6 +123,7 @@ const data = [
         price: 12000,
         img: "/assets/imagenes/remeratermica14.jpg",
         stock: 6,
+        category: "pantalones",
     },
     {
         id: 15,
@@ -118,6 +132,7 @@ const data = [
         price: 8730,
         img: "/assets/imagenes/remeratermica15.jpg",
         stock: 6,
+        category: "pantalones",
     }
 ];
 
@@ -128,12 +143,29 @@ export default function getItems() {
         }, 2000)
     })
 };
-export function getItem() {
+export function getItem(idItem) {
     return new Promise((resolve, reject) => {
+        let itemFind = data.find((item) => {
+            return item.id === parseInt(idItem);
+        });
         setTimeout(() => {
-            resolve(data[2]);
-        }, 2000)
+            if (itemFind) resolve(itemFind);
+            else reject(new Error("item no encontrado"));
+        }, 1500)
     })
 };
 
+export function getItemsByCategory(id) {
+    return new Promise((resolve, reject) => {
 
+        let itemFind = data.filter((item) => {
+            return item.category === id;
+        });
+        setTimeout(() => {
+            console.log("Encontramos:", itemFind)
+            if (itemFind) resolve(itemFind);
+            else reject(new Error("item no encontrado"));
+        }, 1500)
+
+    });
+}

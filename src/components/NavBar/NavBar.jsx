@@ -9,12 +9,12 @@ function NavBar() {
                 <h2>DataShoop</h2>
                 <ul className="menu-principal">
                     <li><Link to="/"> Inicio </Link></li>
-                    <li><Link to="-">Nosotros</Link></li>
-                    <li><Link to="-">Categorias</Link>
+                    <li><Link to="/category/Nosotros">Nosotros</Link></li>
+                    <li className="Categ">Categorias
                         <ul>
-                            <li><Link to="-">Contacto</Link></li>
-                            <li><Link to="-">Envios</Link></li>
-                            <li><Link to="-">Reclamos</Link></li>
+                            <li><Link to="/category/Contacto">Contacto</Link></li>
+                            <li><Link to="/category/Envios">Envios</Link></li>
+                            <li><Link to="/category/Reclamos">Reclamos</Link></li>
                         </ul>
                     </li>
                     <li> <CartWidget /></li>

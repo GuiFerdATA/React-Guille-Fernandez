@@ -16,7 +16,10 @@
     justify-content: center;
     justify-content: space-around;
 }
-
+.Categ{
+    color:white;
+    font-size: 25px;
+}
 .App-header ul a {
     display: block;
     color:white;
@@ -46,9 +49,10 @@ h2 {
     position: absolute;
     padding: 5px;
     background:rgb(92, 90, 90);
+    margin-top: 2px;
 }
 .App-header ul ul a {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     color: white;
 }
 

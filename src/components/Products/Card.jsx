@@ -2,9 +2,13 @@ import React from 'react'
 import ItemCount from '../ItemCount/ItemCount';
 import Button from '../Button/Button';
 import "./card.css";
+import { Link } from 'react-router-dom';
 
 
 function Item(props) {
+
+  const urlDetalle = `/producto/${props.id}`; 
+
   return (
     <div className="card">
       <div className="card-img">
@@ -19,7 +23,9 @@ function Item(props) {
       
       
       <div>
+        <Link to={urlDetalle}>
         <Button text="Ver más" />
+        </Link>
       </div>
       
     </div>
