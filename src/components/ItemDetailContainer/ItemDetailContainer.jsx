@@ -9,6 +9,7 @@ function ItemDetailContainer() {
 
 const {id} = useParams();
 
+
   useEffect(() => {
     getItem(id).then((respuestaDatos) => setData(respuestaDatos));
   },[id]);
