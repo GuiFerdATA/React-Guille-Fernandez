@@ -48,12 +48,13 @@ h2 {
     display: none;
     position: absolute;
     padding: 5px;
-    background-color: #185a9d;
+    background-color:rgb(97, 150, 220);
     margin-top: 2px;
 }
 .App-header ul ul a {
-    margin-bottom: 25px;
+    margin-bottom: 30px;
     color: white;
+    font-size: 25px;
 }
 
 .App-header ul li:hover ul {
