@@ -12,7 +12,7 @@
 
 .card {
     float: left;
-    margin: 30px 50px;
+    margin: 40px 50px;
     min-height: 600px;
     width: 280px;
     height: 100%;
@@ -31,6 +31,7 @@
 
 .card-detail {
     padding: 12px 8px;
+    margin: auto 10px;
 }
 
 .card-detail h3 {    
@@ -40,7 +41,9 @@
 
 .card-detail h4{
     font-size: 30px;
+    margin-bottom: 15px;
 }
 .card-detail p{
     font-size: 25px;
+    margin-bottom: 20px;
 }
