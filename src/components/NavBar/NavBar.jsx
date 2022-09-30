@@ -12,9 +12,9 @@ function NavBar() {
                     <li><Link to="/category/Nosotros">Nosotros</Link></li>
                     <li className="Categ">Categorias
                         <ul>
-                            <li><Link to="/category/Contacto">Contacto</Link></li>
+                            <li><Link to="/category/remeras">Remeras</Link></li>
+                            <li><Link to="/category/pantalones">Pantalones</Link></li>
                             <li><Link to="/category/Envios">Envios</Link></li>
-                            <li><Link to="/category/Reclamos">Reclamos</Link></li>
                         </ul>
                     </li>
                     <li> <CartWidget /></li>
