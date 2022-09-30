@@ -2,7 +2,7 @@ const data = [
     {
         id: 1,
         title: "Ailina",
-        description: "Remera manga larga",
+        description: "Remera Térmica m/larga blanca",
         price: 5.600,
         img: "/assets/imagenes/remeratermica1.jpg",
         stock: 15,
@@ -11,7 +11,7 @@ const data = [
     {
         id: 2,
         title: "Jerald",
-        description: "Winkless",
+        description: "Remera Térmica m/larga azul",
         price: 1234,
         img: "/assets/imagenes/remeratermica2.jpg",
         stock: 6,
@@ -20,7 +20,7 @@ const data = [
     {
         id: 3,
         title: "Jonis",
-        description: "Remera térmica ultra resistente",
+        description: "Remera térmica ultra resistente gris",
         price: 5000,
         img: "/assets/imagenes/remeratermica3.png",
         stock: 20,
@@ -29,7 +29,7 @@ const data = [
     {
         id: 4,
         title: "Terri",
-        description: "Illidge",
+        description: "Remera Térmica m/larga tipo buzo roja",
         price: 4000,
         img: "/assets/imagenes/remeratermica4.jpg",
         stock: 6,
@@ -38,7 +38,7 @@ const data = [
     {
         id: 5,
         title: "Seamus",
-        description: "Mudd",
+        description: "Remera Térmica m/larga negra",
         price: 9000,
         img: "/assets/imagenes/remeratermica5.png",
         stock: 6,
@@ -47,7 +47,7 @@ const data = [
     {
         id: 6,
         title: "Kameko",
-        description: "Castro",
+        description: "Remera Térmica m/larga gris beige",
         price: 6500,
         img: "/assets/imagenes/remeratermica6.jpg",
         stock: 6,
@@ -56,7 +56,7 @@ const data = [
     {
         id: 7,
         title: "Rowen",
-        description: "Sammes",
+        description: "Remera Térmica m/larga salmón",
         price: 7000,
         img: "/assets/imagenes/remeratermica7.jpg",
         stock: 6,
@@ -65,7 +65,7 @@ const data = [
     {
         id: 8,
         title: "Thorsten",
-        description: "Flockhart",
+        description: "Pantalon Térmico negro",
         price: 2500,
         img: "/assets/imagenes/remeratermica8.jpg",
         stock: 6,
@@ -74,7 +74,7 @@ const data = [
     {
         id: 9,
         title: "Niles",
-        description: "Mann",
+        description: "Pantalon Térmico rojo/bordo",
         price: 11000,
         img: "/assets/imagenes/remeratermica9.jpg",
         stock: 6,
@@ -83,7 +83,7 @@ const data = [
     {
         id: 10,
         title: "Pris",
-        description: "Wilcher",
+        description: "Pantalon Térmico negro",
         price: 5680,
         img: "/assets/imagenes/remeratermica10.jpg",
         stock: 6,
@@ -92,7 +92,7 @@ const data = [
     {
         id: 11,
         title: "Aylmer",
-        description: "Burn",
+        description: "Pantalon Térmico tipo calza negro",
         price: 8050,
         img: "/assets/imagenes/remeratermica11.jpg",
         stock: 6,
@@ -101,7 +101,7 @@ const data = [
     {
         id: 12,
         title: "Dean",
-        description: "Brinicombe",
+        description: "Pantalon Térmico tipo jogging gris oscuro",
         price: 8760,
         img: "/assets/imagenes/remeratermica12.jpg",
         stock: 6,
@@ -110,7 +110,7 @@ const data = [
     {
         id: 13,
         title: "Andrea",
-        description: "Nairy",
+        description: "Pantalon Térmico tipo jogging gris claro",
         price: 3570,
         img: "/assets/imagenes/remeratermica13.jpg",
         stock: 6,
@@ -119,7 +119,7 @@ const data = [
     {
         id: 14,
         title: "Konrad",
-        description: "Quarrie",
+        description: "Pantalon Térmico tipo calza negro",
         price: 12000,
         img: "/assets/imagenes/remeratermica14.jpg",
         stock: 6,
@@ -128,7 +128,7 @@ const data = [
     {
         id: 15,
         title: "Alvin",
-        description: "Ronci",
+        description: "Pantalon Térmico jogging beige",
         price: 8730,
         img: "/assets/imagenes/remeratermica15.jpg",
         stock: 6,
