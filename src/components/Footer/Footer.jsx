@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 function Footer() {
     return (
-        <div className="content-footer">
+        <div>
             <footer className="footer">
                 <h2>
                     <strong>MyEcommerce</strong>
