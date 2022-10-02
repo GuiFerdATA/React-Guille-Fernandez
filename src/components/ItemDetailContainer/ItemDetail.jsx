@@ -10,7 +10,7 @@ function ItemDetail(props) {
         <div className='cCs'>
             <div className="main-container">
             <h3>{props.title}</h3>
-                <img src={props.img} alt="card img" />
+                <img src={props.img} alt="card-img" />
             </div>
             <div className="card-detail">
                 <p>{props.description}</p>
