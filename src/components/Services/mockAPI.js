@@ -162,7 +162,6 @@ export function getItemsByCategory(id) {
             return item.category === id;
         });
         setTimeout(() => {
-            console.log("Encontramos:", itemFind)
             if (itemFind) resolve(itemFind);
             else reject(new Error("item no encontrado"));
         }, 1500)
