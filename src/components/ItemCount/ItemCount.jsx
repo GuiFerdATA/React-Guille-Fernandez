@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Button from "../Button/Button";
 import "./itemcount.css";
 
-// onAddToCart
 function ItemCount({ stock, onAddToCart }) {
     const [count, setCount] = useState(1);
 

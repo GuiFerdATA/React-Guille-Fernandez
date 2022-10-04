@@ -1,6 +1,22 @@
-button{
+button {
     font-size: 15px;
     padding: 4px 2px;
     margin: 10px 5px;
     border-color: rgb(187, 175, 175);
+}
+
+.itemcount_container {
+    border: solid thin rgb(187, 175, 175);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto;
+    text-align: center;
+    justify-content: space-around;
+    max-width: 250px;
+}
+.itemcount_control {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0px 50px;
 }
