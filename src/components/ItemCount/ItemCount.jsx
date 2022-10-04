@@ -1,35 +1,32 @@
-import React from 'react'
-import "./itemcount.css"
+import React, { useState } from "react";
+import Button from "../Button/Button";
+import "./itemcount.css";
 
-function ItemCount(props) {
-    let [count, setCount] = React.useState(props.initial)
+// onAddToCart
+function ItemCount({ stock, onAddToCart }) {
+    const [count, setCount] = useState(1);
 
     function handleAdd() {
-        if(count === props.stock){
-            alert("Máximo de Stock disponible!")
-    } else {
-        setCount(count + 1)
+        if (count < stock) setCount(count + 1);
     }
-    props.initial = props.stock - count;
-}
 
     function handleSubstract() {
-        if(count === 1) {
-            alert("Necesitas tener un objeto de compra en tu carrito");
-    }else{
-        setCount(count - 1)
+        console.log("ok");
+        if (count > 1) setCount(count - 1);
     }
-}
+
     return (
-        <div>
-        <div>
-            <button onClick={handleAdd}>+</button>
-            <span>{count}</span>
-            <button onClick={handleSubstract}>-</button>
+        <div className="itemcount_container">
+            <div className="itemcount_control">
+                <Button color="#14A44D" onClick={handleSubstract}>-</Button>
+                <span>{count}</span>
+                <Button color="#14A44D" onClick={handleAdd}>+</Button>
+            </div>
+            <div className="itemcount_btns">
+                <Button color="#14A44D" onClick={() => { onAddToCart(count); }} > Agregar al carrito</Button>
+            </div>
         </div>
-        <button>Agregar al carrito</button>
-        </div>
-    )
+    );
 }
 
-export default ItemCount ;
+export default ItemCount;
