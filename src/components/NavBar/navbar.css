@@ -18,16 +18,15 @@
 }
 
 .Categ {
-    color: white;
+    color:#FBFBFB;
     font-size: 29px;
 }
 
 .App-header ul a {
     display: block;
-    color: white;
+    color: #FBFBFB;
     text-decoration: none;
     font-size: 29px;
-    
 }
 
 .App-header ul li {
@@ -60,11 +59,10 @@ h2 {
 
 .App-header ul ul a {
     margin-bottom: 40px;
-    color: white;
+    color: #FBFBFB;
     font-size: 30px;
     transition: background-color 0.3s;
 }
-
 
 
 .App-header ul li:hover ul {
@@ -78,4 +76,6 @@ h2 {
 .App-header h2 {
     margin-bottom: 50px;
     color: #FBFBFB;
+
+    ;
 }
