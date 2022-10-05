@@ -9,11 +9,11 @@ function ItemDetail(props) {
 
 
 
-const [showItemsCount, setShowItemsCount] = useState(true);
+const [attItemsCount, setItemsCount] = useState(true);
 
 function onAddToCart(count){
     alert(`Agregaste ${count} productos a tu carrito de compras! `);
-    setShowItemsCount(false);
+    setItemsCount(false);
     
 }
     return (
@@ -25,7 +25,7 @@ function onAddToCart(count){
             <div className="card-detail">
                 <p>{props.description}</p>
                 <h4>$ {props.price}</h4>
-                {showItemsCount === true? <ItemCount initial={1} stock={6}  onAddToCart={onAddToCart}/>: <Link to="/cart"> <button>Finalizar compra</button></Link>}
+                {attItemsCount === true? <ItemCount initial={1} stock={6}  onAddToCart={onAddToCart}/>: <Link to="/cart"> <button>Finalizar compra</button></Link>}
                 
             </div>
         </div>
