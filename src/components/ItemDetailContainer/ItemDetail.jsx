@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import "./itemdatailcontainer.css";
 import {Link} from "react-router-dom";
 import ItemCount from '../ItemCount/ItemCount';
+import Button from "../Button/Button";
+
 
 
 
@@ -25,7 +27,7 @@ function onAddToCart(count){
             <div className="card-detail">
                 <p>{props.description}</p>
                 <h4>$ {props.price}</h4>
-                {attItemsCount === true? <ItemCount initial={1} stock={6}  onAddToCart={onAddToCart}/>: <Link to="/cart"> <button>Finalizar compra</button></Link>}
+                {attItemsCount === true? <ItemCount initial={1} stock={6}  onAddToCart={onAddToCart}/>: <Link to="/cart"> <Button>Finalizar compra</Button></Link>}
                 
             </div>
         </div>
