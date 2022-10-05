@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
 }
@@ -16,15 +16,18 @@
     justify-content: center;
     justify-content: space-around;
 }
-.Categ{
-    color:white;
+
+.Categ {
+    color: white;
     font-size: 29px;
 }
+
 .App-header ul a {
     display: block;
-    color:white;
+    color: white;
     text-decoration: none;
     font-size: 29px;
+    
 }
 
 .App-header ul li {
@@ -39,7 +42,7 @@
 }
 
 h2 {
-    color:rgb(37, 32, 32);
+    color: rgb(37, 32, 32);
     font-size: 50px;
     margin-bottom: 20px;
 }
@@ -48,14 +51,21 @@ h2 {
     display: none;
     position: absolute;
     padding: 5px;
-    background-color:rgb(97, 150, 220);
+    background: #43cea2;
+    background: -webkit-linear-gradient(to right, #185a9d, #43cea2);
+    background: linear-gradient(to right, #185a9d, #43cea2);
+    border: solid thin rgb(187, 175, 175);
     margin-top: 2px;
 }
+
 .App-header ul ul a {
-    margin-bottom: 30px;
-    color: #FBFBFB;
-    font-size: 25px;
+    margin-bottom: 40px;
+    color: white;
+    font-size: 30px;
+    transition: background-color 0.3s;
 }
+
+
 
 .App-header ul li:hover ul {
     display: block;
@@ -64,9 +74,8 @@ h2 {
 .App-header nav {
     height: 150px;
 }
-.App-header h2{
-    margin-bottom: 50px;
-    color:#FBFBFB;
 
-    ;
+.App-header h2 {
+    margin-bottom: 50px;
+    color: #FBFBFB;
 }
