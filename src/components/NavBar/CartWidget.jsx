@@ -10,7 +10,7 @@ import { useContext } from 'react';
 
 function CartWidget() {
 
-    const { getItemQty} = useContext(CartContext);
+    const { getItemQty } = useContext(CartContext);
 
 
     return (

@@ -11,10 +11,8 @@ const { addItem } = useContext(CartContext)
 function onAddToCart(count){
     
     addItem(ItemCount, count)
-
-    
-    
 }
+
     return (
         <div className='cCs'>
             <div className="main-container">
