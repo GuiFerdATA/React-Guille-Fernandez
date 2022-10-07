@@ -1,21 +1,18 @@
-import React, {useState} from 'react';
+import  {useContext} from 'react';
 import "./itemdatailcontainer.css";
-import {Link} from "react-router-dom";
 import ItemCount from '../ItemCount/ItemCount';
-import Button from "../Button/Button";
-
+import { CartContext } from '../../Context/CartContext';
 
 
 
 function ItemDetail(props) {
 
-
-
-const [attItemsCount, setItemsCount] = useState(true);
-
+const { addItem } = useContext(CartContext)
 function onAddToCart(count){
-    alert(`Agregaste ${count} productos a tu carrito de compras! `);
-    setItemsCount(false);
+    
+    addItem(ItemCount, count)
+
+    
     
 }
     return (
@@ -27,7 +24,7 @@ function onAddToCart(count){
             <div className="card-detail">
                 <p>{props.description}</p>
                 <h4>$ {props.price}</h4>
-                {attItemsCount === true? <ItemCount initial={1} stock={6}  onAddToCart={onAddToCart}/>: <Link to="/cart"> <Button>Finalizar compra</Button></Link>}
+                <ItemCount initial={1} stock={6}  onAddToCart={onAddToCart}/>
                 
             </div>
         </div>
