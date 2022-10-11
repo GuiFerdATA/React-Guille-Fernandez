@@ -3,16 +3,40 @@ import { getItem } from "../Services/mockAPI";
 import "./itemdatailcontainer.css"
 import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
+import { DotSpinner } from '@uiball/loaders'
+
+
 
 function ItemDetailContainer() {
-  let [data, setData] = useState({});
+  const [data, setData] = useState({});
 
-const {id} = useParams();
+  const [error, setError] = useState(false)
+  const { id } = useParams();
 
 
   useEffect(() => {
-    getItem(id).then((respuestaDatos) => setData(respuestaDatos));
-  },[id]);
+    getItem(id)
+      .then((respuestaDatos) => setData(respuestaDatos))
+      .catch((errormsg) => {
+        setError(errormsg.message);
+      });
+  }, [id]);
+
+  if (!data.title) {
+    return <>
+      {error ?
+        <div>
+          <h3>{error}</h3>
+        </div>
+        :
+        <DotSpinner
+          size={60}
+          speed={0.9}
+          color="#01579B"
+        />}
+    </>
+  }
+
 
   return (
     <div>
@@ -21,10 +45,11 @@ const {id} = useParams();
         title={data.title}
         description={data.description}
         price={data.price}
-/>
+        stock={data.stock}
+        offer={data.offer}
+      />
     </div>
   );
 }
 
 export default ItemDetailContainer;
- 

@@ -1,6 +1,7 @@
 const data = [
     {
         id: 1,
+        offer: true,
         title: "Ailina",
         description: "Remera Térmica m/larga blanca",
         price: 5.600,
@@ -10,6 +11,7 @@ const data = [
     },
     {
         id: 2,
+        offer: true,
         title: "Jerald",
         description: "Remera Térmica m/larga azul",
         price: 1234,
@@ -19,15 +21,17 @@ const data = [
     },
     {
         id: 3,
+        offer: true,
         title: "Jonis",
         description: "Remera térmica ultra resistente gris",
         price: 5000,
         img: "/assets/imagenes/remeratermica3.png",
-        stock: 20,
+        stock: 0,
         category: "remeras",
     },
     {
         id: 4,
+        offer: true,
         title: "Terri",
         description: "Remera Térmica m/larga tipo buzo roja",
         price: 4000,
@@ -37,6 +41,7 @@ const data = [
     },
     {
         id: 5,
+        offer: true,
         title: "Seamus",
         description: "Remera Térmica m/larga negra",
         price: 9000,
@@ -50,7 +55,7 @@ const data = [
         description: "Remera Térmica m/larga gris beige",
         price: 6500,
         img: "/assets/imagenes/remeratermica6.jpg",
-        stock: 6,
+        stock: 0,
         category: "remeras",
     },
     {
@@ -122,7 +127,7 @@ const data = [
         description: "Pantalon Térmico tipo calza negro",
         price: 12000,
         img: "/assets/imagenes/remeratermica14.jpg",
-        stock: 6,
+        stock: 0,
         category: "pantalones",
     },
     {
