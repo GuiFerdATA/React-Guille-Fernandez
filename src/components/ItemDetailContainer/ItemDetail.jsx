@@ -4,6 +4,7 @@ import ItemCount from '../ItemCount/ItemCount';
 import { CartContext } from '../../Context/CartContext';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Button from '../Button/Button';
 
 
 
@@ -33,7 +34,9 @@ function ItemDetail(item) {
                     !isInCart ? (
                         <ItemCount initial={1} stock={6} onAddToCart={handleAddToCart} />
                     ) : (
-                        <Link to="/cart">Ir al carrito</Link>
+                        <Link to="/cart">
+                            <Button>Ir al carrito</Button>
+                        </Link>
                     )}
             </div>
         </div>
