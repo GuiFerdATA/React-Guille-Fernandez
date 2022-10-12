@@ -37,7 +37,9 @@ function ItemDetail(item) {
                         <Link to="/cart">
                             <Button>Ir al carrito</Button>
                         </Link>
+                        
                     )}
+
             </div>
         </div>
     );
