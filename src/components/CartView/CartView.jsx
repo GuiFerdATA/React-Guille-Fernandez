@@ -13,7 +13,7 @@ function CartView() {
     }
     return (
         <div>
-            { cart.map ( (item) => (
+            {cart.map((item) => (
                 <div>
                     
                     <h5>Titulo:{item.title}</h5>
