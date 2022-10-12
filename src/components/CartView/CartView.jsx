@@ -23,7 +23,7 @@ function CartView() {
                     <h4>Cantidad de objetos: {item.count}</h4>
                     <h4>Nombre de objeto:{item.title}</h4>
                     <h4>Precio: ${item.price} </h4>
-                    <h4>Total: ${item.price * item.count}</h4>
+                    <h4>Total: ${item.count * item.price }</h4>
                     <Link to="*">
                         <Button>Finalizar compra</Button>
                     </Link>
