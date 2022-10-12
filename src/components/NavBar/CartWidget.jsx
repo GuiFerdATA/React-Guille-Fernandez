@@ -16,7 +16,7 @@ function CartWidget() {
     return (
         <div className="card-widget">
             <FontAwesomeIcon icon={faCartArrowDown} />
-            <span>{getItemQty()}</span>
+            <span>{getItemQty() > 0 && getItemQty()}</span>
         </div>
     )
 }
