@@ -11,16 +11,21 @@ function CartView() {
     let carritovacio = false;
 
     if (carritovacio) {
-        return <div>Tu carrito está vacio...</div>;
+        return <div>
+            <p>Tu carrito está vacio...</p>
+            <Link to="/">
+            <Button>Seguir navegando</Button>
+            </Link>
+            </div>;
     }
     return (
         <div>
             {cart.map((item) => (
                 <div>
-                    <h2>Cantidad de objetos: {item.count}</h2>
+                    <h4>Cantidad de objetos: {item.count}</h4>
                     <h4>Nombre de objeto:{item.title}</h4>
-                    <h2>Precio: ${item.price} </h2>
-                    <h2>Total: ${item.price * item.count}</h2>
+                    <h4>Precio: ${item.price} </h4>
+                    <h4>Total: ${item.price * item.count}</h4>
                     
                     <Link to="*">
                         <Button>Finalizar compra</Button>
