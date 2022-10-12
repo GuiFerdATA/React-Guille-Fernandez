@@ -21,8 +21,7 @@ function ItemDetail(props) {
 
         <div className='cCs'>
             <div className="main-container">
-            {props.offer === true && <span style={{ color: "#14A44D" }}>Producto  EN OFERTA</span>}
-
+            {props.offer === true && <span style={{ color: "#14A44D" }}>¡PRODUCTO EN OFERTA!</span>}
                 <h3>{props.title}</h3>
                 <img src={props.img} alt="card-img" />
             </div>
