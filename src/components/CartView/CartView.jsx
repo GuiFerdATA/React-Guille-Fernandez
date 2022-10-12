@@ -12,7 +12,9 @@ function CartView() {
     
 
     if (cart.length === 0) {
-        return <div>Tu carrito está vacio...<Link to="/"><Button>Seguir navegando</Button></Link></div>;
+        return <div>
+            <p>¡Ohps!...tu carrito está vacio,necesitas comprar un objeto</p>
+            <Link to="/"><Button>Seguir navegando</Button></Link></div>;
     }
     return (
         <div>
