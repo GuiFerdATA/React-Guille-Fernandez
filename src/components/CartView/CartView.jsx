@@ -16,11 +16,10 @@ function CartView() {
             {cart.map((item) => (
                 <div>
                     
-                    <h5>Titulo:{item.title}</h5>
+                    <p>Titulo:{item.title}</p>
                     <p>Cantidad de objetos: {item.count}</p>
-                    <p>Suma total: $ </p>
-                    <h3>{item.title}</h3>
-                    
+                    <p>Precio: ${item.price} </p>
+                    <p>{item.price * item.count}</p>
                 </div>
             ))}
         </div>
