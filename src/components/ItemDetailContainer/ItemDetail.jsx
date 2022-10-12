@@ -31,14 +31,13 @@ function ItemDetail(item) {
                 <p>{item.description}</p>
                 <h4>${item.price}</h4>
                 {
-                    !isInCart ? (
+                    !isInCart ? 
                         <ItemCount initial={1} stock={6} onAddToCart={handleAddToCart} />
-                    ) : (
+                    : 
                         <Link to="/cart">
                             <Button>Ir al carrito</Button>
                         </Link>
-                        
-                    )}
+                    }
 
             </div>
         </div>
