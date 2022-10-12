@@ -4,9 +4,10 @@ import { Link } from "react-router-dom";
 import { CartContext } from "../../Context/CartContext";
 import Button from "../Button/Button";
 
+
 function CartView() {
     const context = useContext(CartContext);
-    const { cart } = context;
+    const { cart, deleteItem} = context;
 
     let carritovacio = false;
 
@@ -33,6 +34,7 @@ function CartView() {
                     <Link to="/">
                         <Button>Seguir navegando</Button>
                     </Link>
+                    <Button className="btn" onClick={deleteItem}>Vaciar Carrito</Button>
                 </div>
             ))}
         </div>
