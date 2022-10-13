@@ -1,20 +1,10 @@
 import { createContext, useState } from "react";
 
-
-
 export const CartContext = createContext();
 
 const { Provider } = CartContext
-
 const MyProvider = ({ children }) => {
-
-
-    const [cart, setCart] = useState([]);
-
-
-    const isInCart = (id) => {
-        return cart.some(x => x.id === id)
-    }
+const [cart, setCart] = useState([]);
 
 
     const addItem = (item, count) => {
@@ -24,13 +14,13 @@ const MyProvider = ({ children }) => {
         }
 
         if (isInCart(newItem.id)) {
-            const findProduct = cart.find(x => x.id === newItem.id)
-            const productIndex = cart.indexOf(findProduct)
-            const auxArray = [...cart]
-            auxArray[productIndex].count += count
-            setCart(auxArray)
+            const findProduct = cart.find(x => x.id === newItem.id);
+            const productIndex = cart.indexOf(findProduct);
+            const auxArray = [...cart];
+            auxArray[productIndex].count += count;
+            setCart(auxArray);
         } else {
-            setCart([...cart, newItem])
+            setCart([...cart, newItem]);
         }
 
     }
@@ -39,19 +29,26 @@ const MyProvider = ({ children }) => {
     const emptyCart = () => {
         setCart([])
     }
+    
 
     const deleteItem = (id) => {
-        return setCart(cart.filter(x => x.id !== id));
+        return setCart(cart.filter(item => item.id !== id));
     }
 
 
     const getItemQty = () => {
-        return cart.reduce((acc, x) => acc += x.count, 0);
+        return cart.reduce((acc, item) => acc += item.count, 0);                     
     }
 
 
     const getItemPrice = () => {
-        return cart.reduce((acc, x) => acc += x.price * x.count, 0);
+        return cart.reduce((acc, item) => acc += item.price * item.count, 0);
+    }
+
+
+
+    const isInCart = (id) => {
+        return cart.some(item => item.id === id)
     }
 
 
