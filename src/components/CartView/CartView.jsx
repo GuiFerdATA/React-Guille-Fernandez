@@ -8,9 +8,9 @@ import "./cartview.css"
 
 function CartView() {
     const context = useContext(CartContext);
-    const { cart, deleteItem, getItemPrice} = context;
+    const { cart, deleteItem, getItemPrice } = context;
 
-    
+
 
     if (cart.length === 0) {
         return <div>
@@ -18,35 +18,46 @@ function CartView() {
             <Link to="/"><Button>Seguir navegando</Button></Link></div>;
     }
     return (
-        <div>
-            {cart.map((item) => (
-                <div className="div-general">
-                <div>
-                    <div>
-                    <img className='cartview-img' src={item.img} alt={item.title} />
-                </div>
-                <div>
-                    <h4>{item.id}</h4>
-                    <h4>Cantidad de objetos: {item.count}</h4>
-                    <h4>Nombre de objeto:{item.title}</h4>
-                    <h4>Precio: ${item.price} </h4>
-                </div>
-                </div>
-                <h2 className='cartview-total'>Total: ${getItemPrice()}</h2>
-                    <Link to="*">
-                        <Button>Finalizar compra</Button>
-                    </Link>
-                    <Link to="/">
-                        <Button>Seguir navegando</Button>
-                    </Link>
-
-                    <Button className="btn" onClick={deleteItem}>Vaciar Carrito</Button>
-                    
-
-                </div>
-            ))}
-        </div>
+        <>
+            <h3>Carrito de compras</h3>
+            <table className="cartList">
+                <thead className="">
+                    <tr className="">
+                        <th>Imagen</th>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Eliminar</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {cart.map((item) => {
+                        return (
+                            <tr key={item.id} className="">
+                                <td>
+                                    <img height={50} src={item.img} alt={item.title} />
+                                </td>
+                                <td>{item.title}</td>
+                                <td>$ {item.price}</td>
+                                <td>{item.count}</td>
+                                <td>
+                                    <Button onClick={deleteItem}>X</Button>
+                                </td>
+                                <th>$ {item.price * item.count}</th>
+                            </tr>
+                        );
+                    })}
+                </tbody>
+            </table>
+            <h3>El total de tu compra es de $ {getItemPrice()}</h3>
+            <Link to="/"><Button>¡Segui navegando!</Button></Link>
+            <Link to="*"><Button>¡Finalizá tu compra!</Button></Link>
+            <Link to=""><Button className="btn" onClick={deleteItem}>¡Vaciá tu carrito!</Button></Link>
+        </>
+        
     );
 }
-
 export default CartView;
+
+
