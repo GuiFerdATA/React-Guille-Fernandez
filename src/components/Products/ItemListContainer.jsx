@@ -1,12 +1,9 @@
 
-import React, { useState } from 'react'
-import getItems from '../Services/mockAPI';
-import { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import ItemList from './ItemList';
 import { useParams } from "react-router-dom";
-import { getItemsByCategory } from "../Services/mockAPI"
 import { DotSpinner } from '@uiball/loaders'
-
+import { getItems, getItemsByCategory } from "../Services/firestore";
 
 
 
@@ -19,9 +16,9 @@ function ItemListContainer(props) {
         setIsLoading(true);
         if (id === undefined) {
             getItems().then((respuestaDatos) => setData(respuestaDatos))
-                .finally(() => setIsLoading(false));
+            .finally(() => setIsLoading(false));
         } else {
-            getItemsByCategory(id).then((respuestaDatos) => setData(respuestaDatos))
+            getItemsByCategory(id).then((respuestaDatosFiltrados) => setData(respuestaDatosFiltrados))
                 .finally(() => setIsLoading(false))
         }
     }, [id]);

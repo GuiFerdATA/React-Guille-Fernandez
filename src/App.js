@@ -3,14 +3,14 @@ import "./App.css";
 import NavBar from '../src/components/NavBar/NavBar';
 import ItemListContainer from '../src/components/Products/ItemListContainer';
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route} from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 import MyProvider from "./Context/CartContext";
 import CartView from "./components/CartView/CartView";
 
-
-
 function App() {
+
+
   return (
     <MyProvider>
       <BrowserRouter>
