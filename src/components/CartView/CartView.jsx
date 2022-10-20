@@ -55,7 +55,7 @@ function handleCheckout(){
                 <tbody>
                     {cart.map((item) => {
                         return (
-                            <tr className="">
+                            <tr key ={item.id} className="">
                                 <td>
                                     <img height={50} src={item.img} alt={item.title} />
                                 </td>
