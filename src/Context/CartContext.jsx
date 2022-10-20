@@ -42,7 +42,7 @@ const [cart, setCart] = useState([]);
 
 
     const getItemPrice = () => {
-        return cart.reduce((acc, item) => acc += item.price * item.count, 0);
+        return cart.reduce((acc, item) => acc += item.count * item.price, 0);
     }
 
 
