@@ -71,10 +71,11 @@ function handleCheckout(){
                     })}
                 </tbody>
             </table>
-            <CheckoutForm />
+            
             <h3>El total de tu compra es de $ {getItemPrice()}</h3>
+            <CheckoutForm />
             <Link to="/"><Button>¡Segui navegando!</Button></Link>
-            <Link to=""><Button onClick={handleCheckout}>¡Finalizá tu compra!</Button></Link>
+            <Button onClick={handleCheckout}>¡Finalizá tu compra!</Button>
             <Link to=""><Button className="btn" onClick={deleteItem}>¡Vaciá tu carrito!</Button></Link>
         </>
         

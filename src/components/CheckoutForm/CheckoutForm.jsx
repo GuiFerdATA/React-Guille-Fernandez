@@ -5,33 +5,32 @@ import { useContext } from "react";
 import { createBuyOrder } from '../Services/firestore';
 
 function CheckoutForm() {
+
     const [dataForm, setDataForm] = useState({
         name: "",
         phone: "",
-        email: "",
+        email: ""
     });
 
 
     const navigate = useNavigate()
     const context = useContext(CartContext)
-    const { cart, getItemPrice} = context;
+    const { cart, getItemPrice } = context;
 
 
-    function handleCheckout(event){
+    function handleCheckout(event) {
         event.preventDefaul();
         const orderData = {
-            buyer:{
+            buyer: {
                 buyer: dataForm,
                 items: cart,
                 total: getItemPrice(),
             },
-            items:cart,
+            items: cart,
             total: getItemPrice(),
         }
-        createBuyOrder(orderData).then(orderid=>{
-            alert(orderid);
-            navigate(`/checkout/${orderid}`)
-            
+        createBuyOrder(orderData).then((orderid) => {
+            navigate(`/checkout/${orderid}`);
         });
     }
 
@@ -45,8 +44,8 @@ function CheckoutForm() {
         setDataForm(newDataForm);
     }
 
-    return (   
-            <div className="form-container">
+    return (
+        <div className="form-container">
             <form onSubmit={handleCheckout}>
                 <p>Completa los siguientes datos para poder finalizar</p>
 
@@ -85,8 +84,9 @@ function CheckoutForm() {
                         required
                     />
                 </div>
-            
+
             </form>
+            
         </div>
     )
 }
