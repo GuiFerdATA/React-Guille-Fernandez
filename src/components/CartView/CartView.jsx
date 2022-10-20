@@ -6,6 +6,7 @@ import Button from "../Button/Button";
 import { createBuyOrder } from "../Services/firestore";
 import "./cartview.css"
 import { useNavigate } from "react-router-dom";
+import CheckoutForm from "../CheckoutForm/CheckoutForm";
 
 function CartView() {
     const context = useContext(CartContext);
@@ -24,15 +25,14 @@ function handleCheckout(){
 
     const orderData = {
         buyer:{
-            name: "Guillermo",
-            phone: "2494582940",
-            email:"guille.fer79@hotmail.com"
+            name: "",
+            phone: "",
+            email:""
         },
         items:cart,
         total: getItemPrice(),
     }
     createBuyOrder(orderData).then(orderid=>{
-        alert(orderid);
         navigate(`/checkout/${orderid}`)
         
     });
@@ -60,7 +60,6 @@ function handleCheckout(){
                                     <img height={50} src={item.img} alt={item.title} />
                                 </td>
                                 <td>{item.title}</td>
-                                <td>{item.title}</td>
                                 <td>$ {item.price}</td>
                                 <td>{item.count}</td>
                                 <td>
@@ -72,6 +71,7 @@ function handleCheckout(){
                     })}
                 </tbody>
             </table>
+            <CheckoutForm />
             <h3>El total de tu compra es de $ {getItemPrice()}</h3>
             <Link to="/"><Button>¡Segui navegando!</Button></Link>
             <Link to=""><Button onClick={handleCheckout}>¡Finalizá tu compra!</Button></Link>
@@ -81,5 +81,4 @@ function handleCheckout(){
     );
 }
 export default CartView;
-
 
