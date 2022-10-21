@@ -3,17 +3,12 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { CartContext } from "../../Context/CartContext";
 import Button from "../Button/Button";
-import { createBuyOrder } from "../Services/firestore";
 import "./cartview.css"
-import { useNavigate } from "react-router-dom";
 import CheckoutForm from "../CheckoutForm/CheckoutForm";
 
 function CartView() {
     const context = useContext(CartContext);
     const { cart, deleteItem, getItemPrice } = context;
-    const navigate = useNavigate()
-
-
 
     if (cart.length === 0) {
         return <div>
@@ -21,22 +16,6 @@ function CartView() {
             <Link to="/"><Button>Seguir navegando</Button></Link></div>;
     }
 
-function handleCheckout(){
-
-    const orderData = {
-        buyer:{
-            name: "",
-            phone: "",
-            email:""
-        },
-        items:cart,
-        total: getItemPrice(),
-    }
-    createBuyOrder(orderData).then(orderid=>{
-        navigate(`/checkout/${orderid}`)
-        
-    });
-}
 
     return (
         <>
@@ -75,8 +54,7 @@ function handleCheckout(){
             <h3>El total de tu compra es de $ {getItemPrice()}</h3>
             <CheckoutForm />
             <Link to="/"><Button>¡Segui navegando!</Button></Link>
-            <Button onClick={handleCheckout}>¡Finalizá tu compra!</Button>
-            <Link to=""><Button className="btn" onClick={deleteItem}>¡Vaciá tu carrito!</Button></Link>
+           <Button className="btn" onClick={deleteItem}>¡Vaciá tu carrito!</Button>
         </>
         
     );

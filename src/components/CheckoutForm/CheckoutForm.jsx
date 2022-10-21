@@ -11,24 +11,23 @@ function CheckoutForm() {
         phone: "",
         email: ""
     });
-
     const navigate = useNavigate();
     const context = useContext(CartContext);
     const { cart, getItemPrice } = context;
 
     function handleCheckout(event) {
-        event.preventDefaul();
+        event.preventDefault();
         const orderData = {
-            
                 buyer: dataForm,
-                items: cart,
+                phone: cart,
                 total: getItemPrice(),
-        }
-        createBuyOrder(orderData).then((orderid) => {
-            navigate(`/checkout/${orderid}`);
+
+        };
+        createBuyOrder(orderData).then(orderid => {
+            navigate(`/checkout/${orderid}`)
+
         });
     }
-
 
     function inputChangeHandler(event) {
         let inputName = event.target.name;
@@ -36,14 +35,13 @@ function CheckoutForm() {
 
         const newDataForm = { ...dataForm };
         newDataForm[inputName] = value;
-        setDataForm(newDataForm)
+        setDataForm(newDataForm);
     }
 
     return (
         <div className="form-container">
             <form onSubmit={handleCheckout}>
                 <p>Completa los siguientes datos para poder finalizar</p>
-
                 <div className="form-item">
                     <label htmlFor="name">Nombre</label>
                     <input
@@ -55,7 +53,6 @@ function CheckoutForm() {
                         required
                     />
                 </div>
-
                 <div className="form-item">
                     <label htmlFor="phone">Telefono</label>
                     <input
@@ -79,7 +76,8 @@ function CheckoutForm() {
                         required
                     />
                 </div>
-            </form> 
+                <button type="submit">¡Finalizá tu compra!</button>
+            </form>
         </div>
     )
 }
