@@ -12,22 +12,17 @@ function CheckoutForm() {
         email: ""
     });
 
-
-    const navigate = useNavigate()
-    const context = useContext(CartContext)
+    const navigate = useNavigate();
+    const context = useContext(CartContext);
     const { cart, getItemPrice } = context;
-
 
     function handleCheckout(event) {
         event.preventDefaul();
         const orderData = {
-            buyer: {
+            
                 buyer: dataForm,
                 items: cart,
                 total: getItemPrice(),
-            },
-            items: cart,
-            total: getItemPrice(),
         }
         createBuyOrder(orderData).then((orderid) => {
             navigate(`/checkout/${orderid}`);
@@ -41,7 +36,7 @@ function CheckoutForm() {
 
         const newDataForm = { ...dataForm };
         newDataForm[inputName] = value;
-        setDataForm(newDataForm);
+        setDataForm(newDataForm)
     }
 
     return (
@@ -62,7 +57,7 @@ function CheckoutForm() {
                 </div>
 
                 <div className="form-item">
-                    <label htmlFor="telefono">Telefono</label>
+                    <label htmlFor="phone">Telefono</label>
                     <input
                         value={dataForm.phone}
                         onChange={inputChangeHandler}
@@ -84,9 +79,7 @@ function CheckoutForm() {
                         required
                     />
                 </div>
-
-            </form>
-            
+            </form> 
         </div>
     )
 }
