@@ -41,6 +41,8 @@ function ItemDetailContainer() {
   return (
     <div>
       <ItemDetail
+        key={data.id}
+        id={data.id}
         img={data.img}
         title={data.title}
         description={data.description}

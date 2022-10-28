@@ -19,15 +19,13 @@ function App() {
           <NavBar />
           <Routes>
             <Route path="/" element={<ItemListContainer greeting="¡Tienda online dataShop!" />} />
-
             <Route path="/category/:id" element={<ItemListContainer />}></Route>
-
             <Route path="/cart" element={<CartView />} />
-
             <Route path="/producto/:id" element={<ItemDetailContainer />} />
-            <Route path="*" element={<h1>200:Pagina en construcción</h1>} />
             <Route path="/checkout/:orderid" element={<Checkout/>} />
 
+
+            <Route path="*" element={<h1>200:Pagina en construcción</h1>} />
           </Routes>
         </div>
         <Footer />

@@ -8,7 +8,7 @@ import CheckoutForm from "../CheckoutForm/CheckoutForm";
 
 function CartView() {
     const context = useContext(CartContext);
-    const { cart, deleteItem, getItemPrice } = context;
+    const { cart, deleteItem, getItemPrice,  emptyCart } = context;
 
     if (cart.length === 0) {
         return <div>
@@ -34,7 +34,7 @@ function CartView() {
                 <tbody>
                     {cart.map((item) => {
                         return (
-                            <tr key ={item.id} className="">
+                            <tr key={item.id} className="">
                                 <td>
                                     <img height={50} src={item.img} alt={item.title} />
                                 </td>
@@ -50,13 +50,13 @@ function CartView() {
                     })}
                 </tbody>
             </table>
-            
+
             <h3>El total de tu compra es de $ {getItemPrice()}</h3>
             <CheckoutForm />
             <Link to="/"><Button>¡Segui navegando!</Button></Link>
-           <Button className="btn" onClick={deleteItem}>¡Vaciá tu carrito!</Button>
+            <Button className="btn" onClick={emptyCart}>¡Vaciá tu carrito!</Button>
         </>
-        
+
     );
 }
 export default CartView;

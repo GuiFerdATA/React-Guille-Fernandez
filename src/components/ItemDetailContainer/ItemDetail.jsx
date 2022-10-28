@@ -39,6 +39,7 @@ function ItemDetail(item) {
                         </Link>
                     }
 
+
             </div>
         </div>
     );
