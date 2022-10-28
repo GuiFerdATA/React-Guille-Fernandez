@@ -19,11 +19,12 @@ function CheckoutForm() {
         event.preventDefault();
         const orderData = {
                 buyer: dataForm,
-                phone: cart,
+                items: cart,
+                date: new Date(),
                 total: getItemPrice(),
 
         };
-        createBuyOrder(orderData).then(orderid => {
+        createBuyOrder(orderData).then((orderid) => {
             navigate(`/checkout/${orderid}`)
 
         });

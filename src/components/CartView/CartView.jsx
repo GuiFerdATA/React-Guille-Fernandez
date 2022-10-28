@@ -42,7 +42,7 @@ function CartView() {
                                 <td>$ {item.price}</td>
                                 <td>{item.count}</td>
                                 <td>
-                                    <Button onClick={deleteItem}>X</Button>
+                                    <Button onClick={() => deleteItem(item.id)}>X</Button>
                                 </td>
                                 <th>$ {item.price * item.count}</th>
                             </tr>
