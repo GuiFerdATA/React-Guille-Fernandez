@@ -29,7 +29,7 @@ function ItemDetailContainer() {
           <h3>{error}</h3>
         </div>
         :
-        <DotSpinner
+        <DotSpinner className="dot_spinner"
           size={60}
           speed={0.9}
           color="#01579B"
