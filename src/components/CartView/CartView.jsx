@@ -20,9 +20,9 @@ function CartView() {
     return (
         <>
             <h3>Carrito de compras</h3>
-            <table className="">
-                <thead className="">
-                    <tr className="">
+            <table className="table">
+                <thead className="tablet_thead">
+                    <tr className="tr">
                         <th>Imagen</th>
                         <th>Nombre</th>
                         <th>Precio</th>
