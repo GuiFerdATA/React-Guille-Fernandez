@@ -19,7 +19,7 @@ function CartView() {
 
     return (
         <>
-            <h3>Carrito de compras</h3>
+            <h3 className="title_cart">Carrito de compras</h3>
             <table className="table">
                 <thead className="tablet_thead">
                     <tr className="tr">
@@ -51,7 +51,7 @@ function CartView() {
                 </tbody>
             </table>
 
-            <h3>El total de tu compra es de $ {getItemPrice()}</h3>
+            <h3 className ="title_cart">El total de tu compra es de $ {getItemPrice()}</h3>
             <CheckoutForm />
             <Link to="/"><Button>¡Segui navegando!</Button></Link>
             <Button className="btn" onClick={emptyCart}>¡Vaciá tu carrito!</Button>
