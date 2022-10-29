@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { CartContext } from "../../Context/CartContext";
 import { useContext } from "react";
 import { createBuyOrder } from '../Services/firestore';
+import "./checkoutform.css";
 
 function CheckoutForm() {
 
@@ -42,7 +43,7 @@ function CheckoutForm() {
     return (
         <div className="form-container">
             <form onSubmit={handleCheckout}>
-                <p>Completa los siguientes datos para poder finalizar</p>
+                <p className="parrafo_form">Completa los siguientes datos para poder finalizar</p>
                 <div className="form-item">
                     <label htmlFor="name">Nombre</label>
                     <input
