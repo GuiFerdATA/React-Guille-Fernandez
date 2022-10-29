@@ -30,13 +30,16 @@ function ItemDetail(item) {
                 {item.stock === 0 && <span style={{ color: "#DC4C64" }}>Producto SIN STOCK</span>}
                 <p>{item.description}</p>
                 <h4>${item.price}</h4>
+                
                 {
+                    
                     !isInCart ? 
                         <ItemCount initial={1} stock={6} onAddToCart={handleAddToCart} />
                     : 
                         <Link to="/cart">
                             <Button>Ir al carrito</Button>
                         </Link>
+                        
                     }
 
 
