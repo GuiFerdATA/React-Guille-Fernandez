@@ -1,4 +1,5 @@
 .table{
+
     background-color:#e4e4e4af;
     margin-top: auto;
     display: table;
@@ -9,6 +10,7 @@
 }
 
 .tr{
+    
     background-color: #54B4D3;
     
     
