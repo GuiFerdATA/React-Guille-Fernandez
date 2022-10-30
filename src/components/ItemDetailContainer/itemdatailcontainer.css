@@ -16,3 +16,11 @@ h4{
 	color:#332D2D;
 }
 
+
+.button_goToCart {
+	margin-bottom: 10px;
+    padding: 5px 10px;
+    color:white;
+    background-color:#004D40;
+    border-radius: 5px;
+}

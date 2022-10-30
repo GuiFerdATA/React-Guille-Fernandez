@@ -4,7 +4,6 @@ import ItemCount from '../ItemCount/ItemCount';
 import { CartContext } from '../../Context/CartContext';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Button from '../Button/Button';
 
 
 
@@ -37,7 +36,7 @@ function ItemDetail(item) {
                         <ItemCount initial={1} stock={6} onAddToCart={handleAddToCart} />
                     : 
                         <Link to="/cart">
-                            <Button>Ir al carrito</Button>
+                            <button className='button_goToCart'>Ir al carrito</button>
                         </Link>
                         
                     }

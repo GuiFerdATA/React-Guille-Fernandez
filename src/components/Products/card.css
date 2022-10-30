@@ -71,3 +71,11 @@ offerTag{
 .div-itemList-Container{
     min-height:100vh;
 }
+
+.button_cardSeeMore{
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    color:white;
+    background-color:#004D40;
+    border-radius: 5px;
+}

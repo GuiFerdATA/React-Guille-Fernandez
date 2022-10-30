@@ -1,5 +1,4 @@
 import React from 'react'
-import Button from '../Button/Button';
 import "./card.css";
 import { Link } from 'react-router-dom';
 
@@ -26,7 +25,7 @@ const urlDetalle = `/producto/${id}`;
       </div>
       <div>
         <Link to={urlDetalle}>
-        <Button>Ver más</Button>
+        <button className="button_cardSeeMore">Ver más</button>
         </Link>
       </div>
       

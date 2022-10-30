@@ -2,7 +2,6 @@ import React from "react";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { CartContext } from "../../Context/CartContext";
-import Button from "../Button/Button";
 import "./cartview.css"
 import CheckoutForm from "../CheckoutForm/CheckoutForm";
 
@@ -11,14 +10,14 @@ function CartView() {
     const { cart, deleteItem, getItemPrice,  emptyCart } = context;
 
     if (cart.length === 0) {
-        return <div>
+        return <div className="divContainer_cartview">
             <p>¡Ohps!...tu carrito está vacio,necesitas comprar un objeto</p>
-            <Link to="/"><Button>Seguir navegando</Button></Link></div>;
+            <Link to="/"><button className="button_cartView">Seguir navegando</button></Link></div>;
     }
 
 
     return (
-        <>
+        <div className="divContainer_carrito">
             <h3 className="title_cart">Carrito de compras</h3>
             <table className="table">
                 <thead className="tablet_thead">
@@ -42,7 +41,7 @@ function CartView() {
                                 <td>$ {item.price}</td>
                                 <td>{item.count}</td>
                                 <td>
-                                    <Button onClick={() => deleteItem(item.id)}>X</Button>
+                                    <button className="button_cartView_delete" onClick={() => deleteItem(item.id)}>X</button>
                                 </td>
                                 <th>$ {item.price * item.count}</th>
                             </tr>
@@ -53,9 +52,9 @@ function CartView() {
 
             <h3 className ="title_cart">El total de tu compra es de $ {getItemPrice()}</h3>
             <CheckoutForm />
-            <Link to="/"><Button>¡Segui navegando!</Button></Link>
-            <Button className="btn" onClick={emptyCart}>¡Vaciá tu carrito!</Button>
-        </>
+            <Link to="/"><button className="button_cartView">¡Segui navegando!</button></Link>
+            <button className="button_cartView" onClick={emptyCart}>¡Vaciá tu carrito!</button>
+        </div>
 
     );
 }

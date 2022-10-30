@@ -1,5 +1,4 @@
 .table{
-
     background-color:#e4e4e4af;
     margin-top: auto;
     display: table;
@@ -18,4 +17,33 @@
 
 .title_cart{
     margin-bottom: 30px;
+}
+
+.divContainer_carrito{
+    min-height:80vh;
+}
+
+.divContainer_cartview {
+    min-height:80vh;
+}
+
+.divContainer_cartview p{
+    font-size: 45px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.button_cartView{
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    color:white;
+    background-color:#004D40;
+    border-radius: 5px;
+}
+.button_cartView_delete{
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    color:white;
+    background-color:#DC4C64;
+    border-radius: 5px;
 }

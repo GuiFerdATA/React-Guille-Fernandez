@@ -1,9 +1,11 @@
 import React from 'react'
+import "./checkout.css"
+
 
 function Checkout() {
     return (
-        <div>
-            <h3>¡¡Gracias por tu compra!! ¡¡Vuelvas Prontos!! </h3>
+        <div className="divContainer_checkout">
+            <h3>¡¡Gracias por tu compra!!</h3>
         </div>
     )
 }
