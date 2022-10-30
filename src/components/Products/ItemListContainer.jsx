@@ -27,7 +27,8 @@ function ItemListContainer(props) {
 
     return (
         <div className='div-itemList-Container'>
-        <div className="dotSpinner">
+            <h1 className='titleGreting'>{props.greeting}</h1>
+            <div className="dotSpinner">
             {
                 isLoading && <DotSpinner
                     size={90}
@@ -36,7 +37,6 @@ function ItemListContainer(props) {
                 />
             }
             </div>
-            <h1 className='titleGreting'>{props.greeting}</h1>
             <div className="main container">
                 <ItemList data={data} />
             </div>
