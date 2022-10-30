@@ -1,0 +1,35 @@
+.form-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#FAFAFA;
+}
+
+.form-container p{
+    color:#332D2D;
+    font-size: 35px;
+    margin-bottom: 25px;
+}
+
+.form-container label{
+    font-size: 25px;
+    color:#332D2D ;
+    
+}
+
+.form-container input{
+
+    align-items: center;
+    margin-bottom: 20px;
+    width: 30%;
+    height: 19px;
+    margin-left: 10px;
+}
+
+.button-submit_form{
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    color:white;
+    background-color:#004D40;
+    border-radius: 5px;
+}
