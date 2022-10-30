@@ -4,6 +4,7 @@ import ItemList from './ItemList';
 import { useParams } from "react-router-dom";
 import { DotSpinner } from '@uiball/loaders'
 import { getItems, getItemsByCategory } from "../Services/firestore";
+import "./card.css"
 
 
 
@@ -25,15 +26,17 @@ function ItemListContainer(props) {
 
 
     return (
-        <div>
+        <div className='div-itemList-Container'>
+        <div className="dotSpinner">
             {
                 isLoading && <DotSpinner
-                    size={60}
+                    size={90}
                     speed={0.9}
                     color="#01579B"
                 />
             }
-            <h1>{props.greeting}</h1>
+            </div>
+            <h1 className='titleGreting'>{props.greeting}</h1>
             <div className="main container">
                 <ItemList data={data} />
             </div>

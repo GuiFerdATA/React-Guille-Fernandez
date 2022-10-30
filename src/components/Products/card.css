@@ -12,7 +12,7 @@
 
 .card {
     float: left;
-    margin: 40px 50px;
+    margin: 19px 50px;
     min-height: 600px;
     width: 280px;
     height: 100%;
@@ -54,4 +54,20 @@
 }
 offerTag{
     color:red;
+}
+
+.titleGreting{
+    color:rgb(7, 47, 94);
+    margin-bottom: 40px;
+}
+
+.dotSpinner{
+    margin:0;
+
+    display: grid;
+    place-content: center;
+
+}
+.div-itemList-Container{
+    min-height:100vh;
 }
