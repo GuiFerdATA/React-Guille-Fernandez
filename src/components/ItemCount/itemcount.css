@@ -3,6 +3,7 @@ button {
     padding: 4px 2px;
     margin: 10px 5px;
     border-color: rgb(187, 175, 175);
+    cursor: pointer;
 }
 
 .itemcount_container {

@@ -21,7 +21,6 @@
     background-color: #fff;
     overflow: hidden;
     transition: all 0.20s ease-in;
-    cursor: pointer;
 }
 
 .card:hover {
@@ -78,4 +77,5 @@ offerTag{
     color:white;
     background-color:#004D40;
     border-radius: 5px;
+    cursor: pointer;
 }

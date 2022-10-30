@@ -39,6 +39,7 @@
     color:white;
     background-color:#004D40;
     border-radius: 5px;
+    cursor: pointer;
 }
 .button_cartView_delete{
     margin-bottom: 10px;
@@ -46,4 +47,5 @@
     color:white;
     background-color:#DC4C64;
     border-radius: 5px;
+    cursor: pointer;
 }
