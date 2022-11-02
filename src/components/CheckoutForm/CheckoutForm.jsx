@@ -6,7 +6,7 @@ import { createBuyOrder } from "../Services/firestore";
 import "./checkoutform.css";
 
 function CheckoutForm() {
-
+    
     const [dataForm, setDataForm] = useState({
         email: "",
         name: "",
@@ -16,7 +16,7 @@ function CheckoutForm() {
     
     const navigate = useNavigate();
     const context = useContext(CartContext);
-    const { cart, getItemPrice} = context;
+    const { cart, getItemPrice, emptyCar} = context;
 
     function handleCheckout(event) {
         event.preventDefault();
@@ -27,9 +27,11 @@ function CheckoutForm() {
                 date: new Date(),
                 total: getItemPrice(),
         };
-        console.log(orderData);
+        
         createBuyOrder(orderData).then((orderid)=>{
+            
             navigate(`/checkout/${orderid}`);
+            emptyCar()
             
         });
     }
@@ -83,7 +85,7 @@ function CheckoutForm() {
                     />
                 </div>
                 
-                <button className="button-submit_form" type="submit">¡Finalizá tu compra!</button> 
+                <button className="button-submit_form" type="submit" onClick={emptyCar}>¡Finalizá tu compra!</button> 
             </form>
         </div>
     )

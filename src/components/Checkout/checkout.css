@@ -1,3 +1,15 @@
 .divContainer_checkout{
     min-height:80vh;
 }
+
+.divContainer_checkout p{
+    font-size: 30px;
+    color:#332D2D;
+    margin: 15px 15px;
+
+}
+
+.orderId{
+    background-color:#e4e4e4af;
+
+}
