@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 
 function Card(props) {
-let {price, title, description, img, id, stock,} = props;
+let {price, title, description, img, id, stock} = props;
 
 const urlDetalle = `/producto/${id}`; 
 

@@ -43,13 +43,12 @@ export async function getSingleItem(idParams) {
 
 }
 
-export async function getItemsByCategory(idParams) {
+export async function getItemsByCategory(catParams) {
     const collectionRef = collection(firestore, "producto");
-    const queryCategory = query(collectionRef, where("category", "==", idParams)
+    const queryCategory = query(collectionRef, where("category", "==", catParams)
     );
 
     const respuesta = await getDocs(queryCategory);
-
     let dataDocs = respuesta.docs.map((documento) => {
         let docFormateado = { ...documento.data(), id: documento.id };
         return docFormateado;
@@ -58,13 +57,10 @@ export async function getItemsByCategory(idParams) {
 }
 
 export async function createBuyOrder(orderData) {
-
-    const miColleccion = collection(firestore, "orders");
-    let respuesta = await addDoc(miColleccion, orderData);
-
-    return respuesta.id;
+    const miCollection = collection(firestore, "orders");
+    let respuesta = await addDoc(miCollection, orderData);
+    return (respuesta.id)
 }
-
 
 export async function exportDataToFirestore() {
     const data = [
@@ -215,7 +211,7 @@ export async function exportDataToFirestore() {
     for (let item of data) {
 
         const newDoc = await addDoc(collectionRef, item);
-        console.log("doc created" , newDoc.id);
+        console.log("doc created", newDoc.id);
     }
 
 }
