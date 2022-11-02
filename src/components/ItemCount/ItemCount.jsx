@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Button from "../Button/Button";
+import swal from "sweetalert";
 import "./itemcount.css";
 
 
@@ -9,7 +10,7 @@ function ItemCount({ stock, initial, onAddToCart }) {
 
     function handleAdd() {
         if(count === stock){
-            alert("Máximo de Stock disponible!")
+            swal("Máximo de Stock disponible!")
     } else {
         setCount(count + 1)
         if (count < stock) setCount(count + 1);
@@ -19,7 +20,7 @@ function ItemCount({ stock, initial, onAddToCart }) {
 
     function handleSubstract() {
         if(count === 1) {
-            alert("Necesitas tener un objeto en tu carrito");
+            swal("Necesitas tener un objeto en tu carrito");
     }else{
         setCount(count - 1)
         console.log("ok");
