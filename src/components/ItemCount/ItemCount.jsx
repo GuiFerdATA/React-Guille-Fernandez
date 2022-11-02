@@ -19,7 +19,7 @@ function ItemCount({ stock, initial, onAddToCart }) {
 
     function handleSubstract() {
         if(count === 1) {
-            alert("Necesitas tener un objeto de compra en tu carrito");
+            alert("Necesitas tener un objeto en tu carrito");
     }else{
         setCount(count - 1)
         console.log("ok");
