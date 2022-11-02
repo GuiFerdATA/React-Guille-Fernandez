@@ -10,7 +10,12 @@ function ItemCount({ stock, initial, onAddToCart }) {
 
     function handleAdd() {
         if(count === stock){
-            swal("Máximo de Stock disponible!")
+            swal({
+                title:"¡Ohoh!",
+                text:"¡Máximo de Stock disponible!",
+                icon:"warning",
+                button:"Aceptar"
+            });
     } else {
         setCount(count + 1)
         if (count < stock) setCount(count + 1);
@@ -20,7 +25,12 @@ function ItemCount({ stock, initial, onAddToCart }) {
 
     function handleSubstract() {
         if(count === 1) {
-            swal("Necesitas tener un objeto en tu carrito");
+            swal({
+                title:"¡Ups!",
+                text:"¡Necesitas tener al menos, un objeto de compra en tu carrito!",
+                icon:"warning",
+                button:"Aceptar"
+        });
     }else{
         setCount(count - 1)
         console.log("ok");
