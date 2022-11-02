@@ -16,7 +16,7 @@ function CheckoutForm() {
     
     const navigate = useNavigate();
     const context = useContext(CartContext);
-    const { cart, getItemPrice, emptyCar} = context;
+    const { cart, getItemPrice} = context;
 
     function handleCheckout(event) {
         event.preventDefault();
@@ -29,9 +29,8 @@ function CheckoutForm() {
         };
         
         createBuyOrder(orderData).then((orderid)=>{
-            
             navigate(`/checkout/${orderid}`);
-            emptyCar()
+
             
         });
     }
@@ -85,7 +84,7 @@ function CheckoutForm() {
                     />
                 </div>
                 
-                <button className="button-submit_form" type="submit" onClick={emptyCar}>¡Finalizá tu compra!</button> 
+                <button className="button-submit_form" type="submit">¡Finalizá tu compra!</button> 
             </form>
         </div>
     )

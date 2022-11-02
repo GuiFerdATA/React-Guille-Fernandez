@@ -9,10 +9,10 @@ function Checkout() {
 
 
     return (
+        
         <div className="divContainer_checkout">
             <h3>¡¡Gracias por tu compra!!</h3>
             <p>El número de comprobante de tu compra es:</p>
-  
             <p className="orderId">{orderid}</p>
         </div>
     )
