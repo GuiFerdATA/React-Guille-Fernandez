@@ -3,6 +3,7 @@ import Card from './Card'
 function ItemList(props) {
     return (
         <div>
+            
             {
                 props.data.map((item) => {
                     return <Card
