@@ -20,7 +20,7 @@ function CheckoutForm() {
 
     function handleCheckout(event) {
         event.preventDefault();
-        console.log(dataForm);
+        
         const orderData = {
                 buyer: dataForm,
                 items: cart,
@@ -30,7 +30,7 @@ function CheckoutForm() {
         console.log(orderData);
         createBuyOrder(orderData).then((orderid)=>{
             navigate(`/checkout/${orderid}`);
-            console.log(orderid)
+            
         });
     }
 
