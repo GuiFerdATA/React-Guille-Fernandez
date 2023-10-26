@@ -1,3 +1,5 @@
 Es un pequeño Ecommerce dedicado a la venta de ropa térmica en Argentina (con muchas ganas de expandirnos) En la cual hay venta por menor y por mayor según el usuario requiera, Al usuario le damos una breve descripción del producto, el cual puede elegir ver mas detalles de el mismo, y navegar por la web. El Ecommerce esta en desarrollo y tiene un tiempo estimado de finalización en unas 3 semanas de la fecha actual 29/9/2022. El mismo va a permitir la compra de varios objetos simultáneos en diferentes partes de la misma web dando una mejor navegabilidad al usuario. La misma va a contar con secciones para Pantalones, Envíos, Remeras para una mayor seguridad y organización. Es un Ecommerce totalmente echo con Reac Js, respetando las consignas otorgadas. ¡¡Que disfruten y atentos a los cambios!!
 
 ![simplescreenrecorder-2022-11-02_14 11 26](https://user-images.githubusercontent.com/102935993/199609765-8b55d693-6589-44ff-bb21-045e17f62e6b.gif)
+
+- Link  https://fantastic-kitten-00c562.netlify.app/
